@@ -54,7 +54,7 @@ const Tree = () => {
     const novoEstado = !circuitoAtivado; // Inverte o estado
 
     // Atualiza o valor do rele de bomba no Firebase
-    const releRef = database.ref('/esp32/atuadores/rele da bomba');
+    const releRef = database.ref('/esp32/atuadores/rele');
     await releRef.set(novoEstado); // Altera o valor do rele para true ou false
 
     // Atualiza o estado local
@@ -177,3 +177,4 @@ const Tree = () => {
 };
 
 export default Tree;
+
