@@ -1,0 +1,172 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/planta2.jpg");
+
+    
+        
+    form{
+        width: 500px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        text-align: center;
+        padding: 2rem;
+
+        input, textarea{
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #000;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+
+        }
+
+        textarea{
+            resize: none;
+            height: 100px;
+        }
+
+        button{
+            padding: 0.8rem;
+            width: 40%;
+            background: chartreuse;
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: filter 0.8;
+            
+            &:hover{
+                filter: brightness(0.9)
+            }
+        }
+    }
+}
+    .caixacontatos{
+        width: 500px;
+        padding: 1rem;
+        background: brown;
+        height: 500px;
+        text-align: center;
+        border-radius: 0.8rem;
+        margin-left: 5rem;
+        overflow: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        input{
+            width: 100m;
+        margin-left: 1rem;
+        text-align: center;
+
+        input ,textarea{
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #000;
+            border-radius: 0.3rem;
+
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        button{
+            padding: 0.8rem;
+            width: 40%;
+            background: chartreuse;
+            border: none;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: filter 0.8;
+            
+            &:hover{
+                filter: brightness(0.9)
+            }
+        }
+    }
+
+//a parte da agenda da direita pode colocar como cadastro
+
+    .caixacontatos{ //opcional acho que vai dar pra apagar depois
+        width: 500px;
+        padding: 1rem;
+        background: brown;
+        height: 500px;
+        text-align: center;
+        border-radius: 0.8rem;
+        margin-left: 5rem;
+        overflow: auto;
+
+        input{
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #000;
+            border-radius: 0.3rem;
+
+        }
+
+    }
+
+    .caixaindividual{
+        background: #3707e6;
+        border-radius: 0.5rem;
+        text-align: left;
+        max-height: 200px;
+        box-sizing: content-box;
+
+        .nometitulo{
+            font-size: 1.5rem;
+            text-align: left;
+            padding: 0.1rem 1rem;
+            margin: 0.5rem;
+            font-weight: bold;
+            
+        }
+
+        .boxtitulo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            div{
+                margin-right: 1rem;
+            }
+            
+            a{
+                color: red;
+                cursor: pointer;
+                margin-left: 0.5rem;
+                &:hover{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        
+
+        
+    .dados{
+        padding: 0.5rem 1.5rem;
+        
+        p{
+            margin:0;
+
+        }
+        
+    }
+
+
+    }
+
+
+}
+

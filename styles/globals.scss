@@ -1,0 +1,130 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.bg-cadastro{
+  background: rgb(20,128,26);
+background: linear-gradient(0deg, rgba(20,128,26,1) 0%, rgba(8,159,200,1) 100%);
+}
+
+.arredondar{
+  border-radius: 15px;
+}
+
+.treecare-afastar{
+  margin-top: 7px;
+}
+
+.fazlogin{
+  color: black;
+}
+
+.fazcadastro{
+  color: black;
+}
+
+.link {
+  color: purple; /* Cor roxa para o "Faça login" */
+  cursor: pointer; /* Faz parecer clicável */
+  text-decoration: underline; /* (Opcional) Adiciona sublinhado */
+}
+
+.linkcad{
+  color: purple; /* Cor roxa para o "Faça login" */
+  cursor: pointer; /* Faz parecer clicável */
+  text-decoration: underline; /* (Opcional) Adiciona sublinhado */
+}
+
+.linkcad:hover {
+  color: #45c84c;
+  cursor: pointer;
+}
+
+.loginpagina{
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  
+  
+  .arredondar {
+    border-radius: 8px;
+  }
+  
+  .treecare-afastar {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #57e75d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45c84c;
+  }
+  
+}
+
+.imagemplanta{
+  background-image: url("../images/planta3.jpg");
+ height: 100vh;
+ width: 100%;
+ background-size: cover;
+}
