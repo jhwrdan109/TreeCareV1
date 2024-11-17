@@ -3,7 +3,7 @@ import { database } from "@/services/firebase"; // Importa o serviço do Firebas
 import { useRouter } from 'next/router'; // Para redirecionamento de páginas
 
 const Tree = () => {
-  // Cria estados para armazenar os valores dos sensores e do rele de bomba
+  // Cria estados para armazenar os valores dos sensores e do relé
   const [distancia, setDistancia] = useState(null);
   const [temperatura, setTemperatura] = useState(null);
   const [umidadeAr, setUmidadeAr] = useState(null);
@@ -25,37 +25,37 @@ const Tree = () => {
         // Verifica se os dados existem e faz o set para os estados
         if (data) {
           setDistancia(data.distancia || "Dados não encontrados");
-          setTemperatura(data["temperatura do ambiente"] || "Dados não encontrados");
-          setUmidadeAr(data["umidade do ar"] || "Dados não encontrados");
-          setUmidadeSolo(data["umidade do solo"] || "Dados não encontrados");
+          setTemperatura(data.ambiente || "Dados não encontrados");
+          setUmidadeAr(data.ar || "Dados não encontrados");
+          setUmidadeSolo(data.solo || "Dados não encontrados");
         }
       });
 
-      // Caminho para o valor do rele de bomba no Firebase
-      const releRef = database.ref('/esp32/atuadores/rele da bomba');
+      // Caminho para o valor do relé no Firebase
+      const releRef = database.ref('/esp32/atuadores/rele');
       releRef.on('value', (snapshot) => {
         const releStatus = snapshot.val();
         if (releStatus !== null) {
-          setCircuitoAtivado(releStatus);  // Atualiza o estado do rele
+          setCircuitoAtivado(releStatus);  // Atualiza o estado do relé
         }
       });
 
       return () => {
         dbRef.off();  // Limpa o listener dos sensores
-        releRef.off();  // Limpa o listener do rele de bomba
+        releRef.off();  // Limpa o listener do relé
       };
     };
 
     fetchData();
   }, []);
 
-  // Função para alternar o estado do circuito e atualizar o rele da bomba no Firebase
+  // Função para alternar o estado do circuito e atualizar o relé no Firebase
   const toggleCircuito = async () => {
     const novoEstado = !circuitoAtivado; // Inverte o estado
 
-    // Atualiza o valor do rele de bomba no Firebase
+    // Atualiza o valor do relé no Firebase
     const releRef = database.ref('/esp32/atuadores/rele');
-    await releRef.set(novoEstado); // Altera o valor do rele para true ou false
+    await releRef.set(novoEstado); // Altera o valor do relé para true ou false
 
     // Atualiza o estado local
     setCircuitoAtivado(novoEstado);
@@ -177,4 +177,5 @@ const Tree = () => {
 };
 
 export default Tree;
+
 
