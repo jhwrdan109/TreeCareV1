@@ -4,10 +4,11 @@
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-image: url("../images/planta2.jpg");
+    background-image: url("../images/planta3.jpg");
+    background-size: cover;
 
-    
         
+    
     form{
         width: 500px;
         margin-right: 1rem;
@@ -170,3 +171,14 @@
 
 }
 
+
+@media (max-width: 768px){
+   .cadastrar1{
+    display: flex;
+    margin-right: 25px;
+    height: 120%;
+    margin-left: 25px;
+    width: 50%;
+   }
+
+}
