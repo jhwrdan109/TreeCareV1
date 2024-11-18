@@ -75,7 +75,7 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
-      <div className="bg-cadastro arredondar">
+      <div id='cadastrar1' className="bg-cadastro arredondar">
         <form onSubmit={gravar}>
           <h1 className="treecare-afastar">TreeCare</h1>
 
