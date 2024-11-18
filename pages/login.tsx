@@ -32,7 +32,7 @@ export default function Login() {
 
   return (
     <div className={styles.container}>
-      <div className="loginpagina bg-cadastro arredondar">
+      <div id="login1" className="loginpagina bg-cadastro arredondar">
         <h1 className="treecare-afastar text-center">TreeCare</h1>
         
         {/* Mensagem de sucesso */}
