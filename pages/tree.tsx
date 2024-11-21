@@ -95,7 +95,7 @@ const Tree = () => {
           <h2 style={{ marginTop: "0" }}>Monitoramento dos Sensores</h2>
           <div style={{ marginTop: "30px", textAlign: "left" }}>
             <h3>
-              Porcentagem de água: {distancia !== null ? distancia : "Carregando..."}
+               Porcentagem de água: {distancia !== null ? `${distancia}%` : "Carregando..."}
             </h3>
             <h3>
               Temperatura do ambiente: {temperatura !== null ? temperatura : "Carregando..."}
